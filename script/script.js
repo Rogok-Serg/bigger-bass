@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   try {
-    const response = await fetch("../../symbols.json");
+    const response = await fetch("/symbols.json");
     const data = await response.json();
     symbols = data.symbols;
     initializeSlotMachine(); // Ensure initialization happens only after loading symbols
