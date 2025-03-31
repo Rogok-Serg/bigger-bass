@@ -106,7 +106,10 @@
 //     }
 //   });
 // });
-
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+  loader.style.display = "none"; // При завантаженні сторінки ховаємо лоадер
+});
 document.addEventListener("DOMContentLoaded", async () => {
   // const loader = document.getElementById("loader");
   const startPopup = document.getElementById("start-popup");
@@ -166,13 +169,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.error("Error loading symbols:", error);
   }
-  // Load symbols from JSON file and then initialize slot machine
-
-  // Simulate loader
-  // setTimeout(() => {
-  //     loader.classList.add("hidden");
-  //     startPopup.classList.remove("hidden");
-  // }, 1500);
 
   spinBtn.addEventListener("click", () => {
     if (freeSpins <= 0) return;

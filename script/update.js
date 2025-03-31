@@ -10,7 +10,7 @@ window.addEventListener("touchmove", (e) => {
 });
 
 window.addEventListener("touchend", () => {
-  if (touchEndY > touchStartY + 50) {
+  if (touchEndY > touchStartY + 80) {
     // перевірка, чи свайп був достатньо довгим
     location.reload(); // оновлення сторінки
   }

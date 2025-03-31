@@ -10,16 +10,18 @@ body {
   padding: 0;
 }
 
-/* #loader {
+#loader {
   position: fixed;
   width: 100%;
   height: 100%;
   background: black;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
-} */
+  z-index: 9999;
+}
 
 .backdrop {
   position: fixed;
@@ -69,19 +71,20 @@ body {
   width: 75%;
 }
 .popup-title {
-  margin: 0;
-  font-size: 6vw;
-  font-weight: 800;
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7vw;
   margin: -8rem 0 0 0;
   span {
-    font-size: 16vw;
+    font-size: 19vw;
     font-weight: 900;
   }
 }
 
 .number-spins {
-  font-size: 13vw;
-  font-weight: 900;
+  font-family: "Changa One", sans-serif;
+  font-size: 15vw;
   line-height: 0.8;
   color: #f5ff36;
   margin: 0;
@@ -97,34 +100,43 @@ body {
     width: 30%;
   }
   p {
-    text-align: left;
-    font-size: 6vw;
-    font-weight: 800;
+    font-family: "Changa One", sans-serif;
+    font-size: 7vw;
     line-height: 1;
+    text-align: left;
     margin-left: -1rem;
   }
 }
 
 .btn-registration {
   position: relative;
-  padding-top: 10rem;
+  padding-top: 8rem;
+  transition: transform 0.3s ease;
+
   img {
     position: absolute;
-    top: 83%;
+    width: 62vw;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 62vw;
   }
+
   button {
+    font-family: "Sigmar One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     position: relative;
     border: none;
     background: transparent;
     color: #fff;
+    -webkit-text-stroke: 4px #360443;
     font-size: 7vw;
-    font-weight: 900;
     z-index: 5;
     cursor: pointer;
   }
+}
+.btn-registration:hover {
+  transform: scale(1.1); /* Збільшуємо зображення на 10% */
 }
 
 #game-container {
@@ -227,10 +239,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 5vw;
+  font-family: "Titan One", sans-serif;
+  font-size: 7vw;
+  font-weight: 900;
+  font-style: normal;
 
-  /* font-size: 77px; */
-  font-weight: 800;
   margin: 0;
   -webkit-text-stroke: 3px #300a78;
   -webkit-text-fill-color: transparent;
@@ -255,9 +268,10 @@ body {
   top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 11vw;
-
+  font-family: "Sigmar One", sans-serif;
+  font-style: normal;
   font-weight: 900;
+  font-size: 11vw;
   background-color: transparent;
   border: none;
   color: #fff;
@@ -291,14 +305,16 @@ body {
 .win-popup-free-spins {
   margin: 0;
   padding-top: 30px;
+  font-family: "Changa One", sans-serif;
   font-size: 7vw;
-  font-weight: 700;
+  font-style: normal;
 }
 
 .done-text {
   width: 38vw;
+  font-family: "Changa One", sans-serif;
+  font-style: normal;
   font-size: 5vw !important;
-  font-weight: 600;
 }
 
 .install {
@@ -316,8 +332,10 @@ body {
 .btn-install {
   width: 36vw;
   color: #fff;
-  font-size: 7vw;
+  font-family: "Sigmar One", sans-serif;
+  font-style: normal;
   font-weight: 900;
+  font-size: 6vw;
   line-height: 1;
   text-decoration: none;
   -webkit-text-stroke: 4px #360443;
@@ -340,7 +358,11 @@ body {
 }
 
 .text-timer {
-  font-size: 3.5vw;
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-size: 3vw;
+  font-style: normal;
+  -webkit-text-stroke: 3px #300a78;
   z-index: 2;
 }
 
