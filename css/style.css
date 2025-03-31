@@ -588,7 +588,7 @@ body {
   }
 
   .win-popup-title {
-    /* width: 58vw; */
+    width: 63vw;
     text-transform: uppercase;
     font-size: 10vw !important;
     line-height: 0.9;
@@ -619,7 +619,7 @@ body {
 
   .img-install {
     width: 60vw;
-    top: -40px;
+    top: -32px;
     left: 15px;
   }
 
