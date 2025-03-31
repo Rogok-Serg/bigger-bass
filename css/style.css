@@ -35,14 +35,14 @@ body {
   position: fixed;
   width: 130%;
   height: 100%;
+  max-height: 1945px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* width: 90%;
-  max-width: 1000px; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
   z-index: 2;
 }
 
@@ -265,9 +265,6 @@ body {
   cursor: pointer;
 }
 
-#win-popup {
-  /* background: #27ae60; */
-}
 .wrapper-win-popup {
   padding-top: 10vw;
 }
@@ -382,10 +379,9 @@ body {
   .popup {
     width: 160vw;
     padding: 15px;
-    height: auto;
   }
   .popup-icon {
-    margin-top: -38vw;
+    margin-top: -12vw;
   }
 
   .popup-title {
@@ -452,7 +448,7 @@ body {
   }
   .win-icon {
     width: 74%;
-    margin-top: 0vw;
+    margin-top: -15vw;
   }
   .win-popup-title {
     width: 65vw;
@@ -515,22 +511,36 @@ body {
   }
 
   .popup-icon {
-    margin-top: -29vw;
+    width: 70%;
+    margin-top: -15vw;
+  }
+
+  .popup-title {
+    padding-top: 73px;
+    font-size: 6vw;
+    span {
+      font-size: 17vw;
+    }
+  }
+
+  .number-spins {
+    font-size: 14vw;
   }
 
   .img-popup {
-    width: 150%;
+    width: 140%;
   }
 
   .registration {
     padding-top: 14px;
+    margin-left: 4rem;
   }
 
   .btn-registration {
     padding: 0;
     margin-top: -3rem;
     button {
-      padding-top: 6rem;
+      padding-top: 7rem;
       font-size: 9vw;
     }
   }
@@ -558,24 +568,64 @@ body {
     max-height: 75%;
   }
 
+  .win-icon {
+    margin-top: -25vw;
+  }
+
   .win-popup-title {
     /* width: 58vw; */
     text-transform: uppercase;
-    font-size: 13vw !important;
+    font-size: 10vw !important;
     line-height: 0.9;
   }
 
   .win-popup-span {
-    font-size: 19vw !important;
+    font-size: 16vw !important;
   }
 
   .win-popup-number-spins {
-    padding-top: 20px;
-    font-size: 14vw !important;
+    padding-top: 25px;
+    font-size: 12vw !important;
   }
 
   .win-popup-free-spins {
-    font-size: 8vw;
+    font-size: 7vw;
+  }
+
+  .win-registration {
+    padding-top: 0;
+  }
+
+  .install {
+    position: relative;
+    width: 67vw;
+    padding-top: 0;
+  }
+
+  .img-install {
+    width: 60vw;
+    top: -37px;
+    left: 15px;
+  }
+
+  .timer {
+    position: relative;
+    padding-top: 18px;
+  }
+
+  .img-timer {
+    width: 38vw;
+    top: 10%;
+    left: 9%;
+  }
+
+  .text-timer {
+    font-size: 3.5vw;
+  }
+
+  .timer-display {
+    font-size: 10vw;
+    padding-bottom: 50px;
   }
 }
 
