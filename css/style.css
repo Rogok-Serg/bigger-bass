@@ -584,7 +584,7 @@ body {
   }
 
   .win-icon {
-    margin-top: -20vw;
+    margin-top: -24vw;
   }
 
   .win-popup-title {
@@ -614,12 +614,12 @@ body {
   .install {
     position: relative;
     width: 67vw;
-    padding-top: 0;
+    padding-top: 9;
   }
 
   .img-install {
     width: 60vw;
-    top: -37px;
+    top: -33px;
     left: 15px;
   }
 
