@@ -512,7 +512,7 @@ body {
 
   .popup-icon {
     width: 70%;
-    margin-top: 0vw;
+    margin-top: -2vw;
   }
 
   .popup-title {
@@ -569,7 +569,7 @@ body {
   }
 
   .win-icon {
-    margin-top: -25vw;
+    margin-top: -7vw;
   }
 
   .win-popup-title {
