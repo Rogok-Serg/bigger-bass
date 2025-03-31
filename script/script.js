@@ -111,7 +111,6 @@ window.addEventListener("load", function () {
   loader.style.display = "none"; // При завантаженні сторінки ховаємо лоадер
 });
 document.addEventListener("DOMContentLoaded", async () => {
-  // const loader = document.getElementById("loader");
   const startPopup = document.getElementById("start-popup");
   const gameContainer = document.getElementById("game-container");
   const winPopup = document.getElementById("win-popup");
@@ -120,6 +119,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const freeSpinsDisplay = document.getElementById("free-spins");
   const backdrop = document.getElementById("backdrop");
   const reels = document.querySelectorAll(".reel");
+  const disable = document.querySelector(".disable");
+  const enable = document.querySelector(".img-btn-spin");
 
   backdrop.classList.add("backdrop");
   // document.body.appendChild(backdrop);
@@ -137,6 +138,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     popup.classList.add("hidden");
     backdrop.classList.add("hidden");
     document.body.classList.remove("no-scroll");
+  }
+
+  function showDisable() {
+    disable.classList.remove("hidden");
+    enable.classList.add("hidden");
   }
 
   activateBtn.addEventListener("click", () => {
@@ -191,6 +197,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     if (freeSpins === 0) {
+      showDisable();
       setTimeout(() => showPopup(winPopup), 2000);
     }
   });
