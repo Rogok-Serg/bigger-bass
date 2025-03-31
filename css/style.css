@@ -170,7 +170,7 @@ body {
 
 #slot-machine {
   position: absolute;
-  top: 20%;
+  top: 24%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -558,11 +558,9 @@ body {
     width: 480px;
     height: 864px;
   }
-
-  /* button {
-    font-size: 14px;
-    padding: 6px 12px;
-  } */
+  #slot-machine {
+    top: 20%;
+  }
 
   .reel-box {
     gap: 0vw;
@@ -575,6 +573,10 @@ body {
   }
   .symbol {
     max-height: 75%;
+  }
+
+  .wrapper-freespins {
+    top: 69%;
   }
 
   .win-icon {
