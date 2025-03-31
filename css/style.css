@@ -1,0 +1,805 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #1e1e1e;
+  color: white;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* #loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+} */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 1, 33, 0.8);
+  z-index: 1;
+}
+
+.popup {
+  position: fixed;
+  width: 130%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 90%;
+  max-width: 1000px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.img-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: translate(-50%, -50%) scale(1, -1) rotate(-90deg);
+}
+
+.wrapper-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 4;
+}
+
+.popup-icon {
+  margin-top: -9rem;
+  width: 75%;
+}
+.popup-title {
+  margin: 0;
+  font-size: 6vw;
+  font-weight: 800;
+  margin: -8rem 0 0 0;
+  span {
+    font-size: 16vw;
+    font-weight: 900;
+  }
+}
+
+.number-spins {
+  font-size: 13vw;
+  font-weight: 900;
+  line-height: 0.8;
+  color: #f5ff36;
+  margin: 0;
+}
+
+.registration {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 6rem;
+  img {
+    width: 30%;
+  }
+  p {
+    text-align: left;
+    font-size: 6vw;
+    font-weight: 800;
+    line-height: 1;
+    margin-left: -1rem;
+  }
+}
+
+.btn-registration {
+  position: relative;
+  padding-top: 10rem;
+  img {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 62vw;
+  }
+  button {
+    position: relative;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 7vw;
+    font-weight: 900;
+    z-index: 5;
+    cursor: pointer;
+  }
+}
+
+#game-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1080px;
+  height: 1945px;
+  /* width: 100%;
+  height: auto;
+  min-height: 100vh; */
+  background-image: url(../images/background.webp);
+  /* background-size: contain; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.icon-bigger {
+  position: absolute;
+  width: 48%;
+
+  /* width: 530px; */
+  max-height: 530px;
+  top: -3%;
+
+  /* top: -55px; */
+  left: 0;
+  z-index: 1;
+}
+.man {
+  position: absolute;
+  width: 86%;
+
+  /* width: 941px; */
+  max-height: 907px;
+  top: -2.5%;
+  /* top: -50px; */
+  right: -10%;
+
+  /* right: -111px; */
+}
+
+#slot-machine {
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.slots {
+  position: absolute;
+  width: 115%;
+}
+
+.reel-box {
+  position: absolute;
+  top: 12vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5vw;
+}
+
+.reel {
+  width: 25vw;
+  max-width: 245px;
+  height: auto;
+  /* max-height: 245px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  row-gap: 1vw;
+
+  /* row-gap: 10px; */
+}
+
+.symbol {
+  width: 94%;
+  max-height: 235px;
+}
+
+.wrapper-freespins {
+  width: 100%;
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-table {
+  width: 66%;
+}
+.span-free {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+
+  /* font-size: 77px; */
+  font-weight: 800;
+  margin: 0;
+  -webkit-text-stroke: 3px #300a78;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  background-image: linear-gradient(#dcefff 40%, #c079e9 49%, #f0cdff 75%);
+}
+
+.wrapper-btn-spin {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-btn-spin {
+  width: 48vw;
+}
+
+.btn-spin {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11vw;
+
+  font-weight: 900;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  -webkit-text-stroke: 4px #360443;
+  cursor: pointer;
+}
+
+#win-popup {
+  /* background: #27ae60; */
+}
+.wrapper-win-popup {
+  padding-top: 10vw;
+}
+.win-icon {
+  width: 58%;
+}
+
+.win-popup-title {
+  width: 58vw;
+  text-transform: uppercase;
+  font-size: 10vw !important;
+  line-height: 0.9;
+}
+
+.win-popup-span {
+  font-size: 16vw !important;
+}
+
+.win-popup-number-spins {
+  padding-top: 50px;
+  font-size: 11vw !important;
+}
+
+.win-popup-free-spins {
+  margin: 0;
+  padding-top: 30px;
+  font-size: 7vw;
+  font-weight: 700;
+}
+
+.done-text {
+  width: 38vw;
+  font-size: 5vw !important;
+  font-weight: 600;
+}
+
+.install {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-install {
+  position: absolute;
+  left: 28%;
+  width: 56vw;
+}
+
+.btn-install {
+  width: 36vw;
+  color: #fff;
+  font-size: 7vw;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-text-stroke: 4px #360443;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 65px;
+  width: 36vw;
+}
+
+.img-timer {
+  position: absolute;
+  left: 36%;
+  width: 38vw;
+}
+
+.text-timer {
+  font-size: 3.5vw;
+  z-index: 2;
+}
+
+.timer-display {
+  font-size: 10vw;
+}
+
+.hidden {
+  display: none;
+}
+.no-scroll {
+  overflow: hidden;
+}
+@media screen and (max-width: 1024px) {
+  .reel-box {
+    gap: 3vw;
+  }
+
+  .symbol {
+    width: 92%;
+    max-height: 220px;
+  }
+
+  .wrapper-freespins {
+    top: 71%;
+  }
+  .btn-registration {
+    padding-top: 11rem;
+  }
+  .install {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 160vw;
+    padding: 15px;
+    height: auto;
+  }
+  .popup-icon {
+    margin-top: -38vw;
+  }
+
+  .popup-title {
+    font-size: 8vw;
+    span {
+      font-size: 22vw;
+    }
+  }
+
+  .number-spins {
+    font-size: 17vw;
+  }
+
+  .registration {
+    padding-top: 20px;
+    p {
+      font-size: 7vw;
+    }
+  }
+
+  .btn-registration {
+    padding-top: 5rem;
+    img {
+      width: 74vw;
+    }
+    button {
+      padding-top: 5rem;
+      font-size: 9vw;
+    }
+  }
+
+  #game-container {
+    width: 768px;
+    height: 1382px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  #slot-machine {
+    gap: 3px;
+  }
+  .reel-box {
+    gap: 3vw;
+  }
+  .reel {
+    width: 25vw;
+    height: 25vw;
+    font-size: 6vw;
+  }
+
+  .symbol {
+    max-height: 85%;
+  }
+
+  .wrapper-freespins {
+    top: 74%;
+  }
+
+  .span-free {
+    font-size: 6vw;
+  }
+  .win-icon {
+    width: 74%;
+    margin-top: 0vw;
+  }
+  .win-popup-title {
+    width: 65vw;
+    text-transform: uppercase;
+    font-size: 11vw !important;
+    line-height: 0.9;
+  }
+
+  .win-popup-span {
+    font-size: 19vw !important;
+  }
+
+  .win-popup-number-spins {
+    font-size: 14vw !important;
+  }
+
+  .win-popup-free-spins {
+    font-size: 9vw;
+  }
+
+  .install {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    width: 36vw;
+  }
+
+  .img-install {
+    left: 29%;
+    width: 67vw;
+  }
+
+  /* .btn-install {
+    font-size: 3.5vw;
+  } */
+  .img-timer {
+    width: 45vw;
+  }
+  .timer {
+    width: 46vw;
+    padding-top: 45px;
+  }
+
+  .text-timer {
+    font-size: 4.5vw;
+    font-weight: 600;
+  }
+
+  .timer-display {
+    font-size: 14vw;
+    font-weight: 900;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .popup-icon {
+    margin-top: -29vw;
+  }
+
+  .img-popup {
+    width: 150%;
+  }
+
+  .registration {
+    padding-top: 14px;
+  }
+
+  .btn-registration {
+    padding: 0;
+    margin-top: -3rem;
+    button {
+      padding-top: 6rem;
+      font-size: 9vw;
+    }
+  }
+
+  #game-container {
+    width: 480px;
+    height: 864px;
+  }
+
+  /* button {
+    font-size: 14px;
+    padding: 6px 12px;
+  } */
+
+  .reel-box {
+    gap: 0vw;
+  }
+
+  .reel {
+    width: 28vw;
+    height: 30vw;
+    font-size: 7vw;
+  }
+  .symbol {
+    max-height: 75%;
+  }
+
+  .win-popup-title {
+    /* width: 58vw; */
+    text-transform: uppercase;
+    font-size: 13vw !important;
+    line-height: 0.9;
+  }
+
+  .win-popup-span {
+    font-size: 19vw !important;
+  }
+
+  .win-popup-number-spins {
+    padding-top: 20px;
+    font-size: 14vw !important;
+  }
+
+  .win-popup-free-spins {
+    font-size: 8vw;
+  }
+}
+
+/* body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #1e1e1e;
+  color: white;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: none;
+
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  width: 90%;
+  max-width: 400px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#start-popup {
+  background: url("../images/stone_table.webp") center/cover no-repeat;
+  padding: 30px;
+}
+
+.btn-activate {
+  background: #f39c12;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  z-index: 3;
+}
+
+#game-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1080px;
+  height: auto;
+  margin-top: 20px;
+  padding: 10px;
+  background-image: url(../images/background.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.icon-bigger {
+  position: absolute;
+  width: 40%;
+  max-width: 450px;
+  height: auto;
+  top: -5%;
+  left: 0;
+  z-index: 1;
+}
+
+.man {
+  position: absolute;
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  top: -5%;
+  right: 0;
+}
+
+#slot-machine {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slots {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+}
+
+.reel-box {
+  position: absolute;
+  top: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3vw;
+}
+
+.reel {
+  width: 25vw;
+  max-width: 220px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  row-gap: 1vw;
+}
+
+.symbol {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+.wrapper-freespins {
+  width: 100%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.span-free {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vw;
+  font-weight: 800;
+  margin: 0;
+  -webkit-text-stroke: 2px #300a78;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  background-image: linear-gradient(#dcefff 40%, #c079e9 49%, #f0cdff 75%);
+}
+
+.wrapper-btn-spin {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-spin {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8vw;
+  font-weight: 900;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  -webkit-text-stroke: 2px #300a78;
+  cursor: pointer;
+}
+
+#win-popup {
+  background: #27ae60;
+}
+
+
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .btn-activate {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .reel {
+    width: 28vw;
+    height: auto;
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .btn-activate {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .reel {
+    width: 32vw;
+    height: auto;
+    font-size: 6vw;
+  }
+} */

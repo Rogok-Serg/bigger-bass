@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bigger Bass</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./script/script.js"></script>
+    <script type="module" src="./script/timer.js"></script>
+  </head>
+  <body>
+    <!-- <div id="loader">Loading...</div> -->
+    <div id="backdrop"></div>
+    <div id="start-popup" class="popup">
+      <img
+        class="img-popup"
+        src="./images/stone_table.webp"
+        alt="stone_table"
+      />
+
+      <div class="wrapper-popup">
+        <img
+          class="popup-icon"
+          src="./images/icon-bigger.webp"
+          alt="icon-bigger"
+        />
+        <h2 class="popup-title">
+          <span>WOW!</span> <br />
+          YOU RECEIVED:
+        </h2>
+        <p class="number-spins">3 FREE <br />SPINS</p>
+        <div class="registration">
+          <img src="./images/not_done.webp" alt="not done" />
+          <p>
+            Without <br />
+            registration
+          </p>
+        </div>
+        <div class="btn-registration">
+          <img src="./images/button.webp" alt="" /><button
+            class="btn-activate"
+            id="activate-btn"
+          >
+            ACTIVATE
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="game-container" class="hidden">
+      <img
+        class="icon-bigger"
+        src="./images/icon-bigger.webp"
+        alt="icon-bigger"
+      />
+      <img class="man" src="./images/man.webp" alt="man" />
+      <div id="slot-machine">
+        <img class="slots" src="./images/slots.webp" alt="slots" />
+        <div class="reel-box">
+          <div class="reel"></div>
+          <div class="reel"></div>
+          <div class="reel"></div>
+        </div>
+      </div>
+      <div class="wrapper-freespins">
+        <img class="img-table" src="./images/table.webp" alt="table" />
+        <p class="span-free">
+          Free Spins: <span class="text-free-spins" id="free-spins">3</span>
+        </p>
+      </div>
+      <div class="wrapper-btn-spin">
+        <img
+          class="img-btn-spin"
+          src="./images/button.webp"
+          alt="button spin"
+        />
+        <button class="btn-spin" id="spin-btn">SPIN</button>
+      </div>
+    </div>
+    <div id="win-popup" class="popup hidden">
+      <img
+        class="img-popup"
+        src="./images/stone_table.webp"
+        alt="stone_table"
+      />
+
+      <div class="wrapper-popup wrapper-win-popup">
+        <img
+          class="popup-icon win-icon"
+          src="./images/icon-bigger.webp"
+          alt="icon-bigger"
+        />
+        <h2 class="popup-title win-popup-title">
+          <span class="win-popup-span">Well done!</span>
+
+          you won:
+        </h2>
+        <p class="number-spins win-popup-number-spins">450 GPB</p>
+        <p class="win-popup-free-spins">+ 250 Free spins</p>
+        <div class="registration">
+          <img class="done" src="./images/done.webp" alt="done" />
+          <p class="done-text">
+            Turn on notifications and receive more special bonuses!
+          </p>
+        </div>
+        <div class="install">
+          <img class="img-install" src="./images/button.webp" alt="button" />
+          <a
+            href="https://www.pragmaticplay.com/en/games/bigger-bass-splash/?gamelang=en&cur=USD"
+            class="btn-activate btn-install"
+            id="activate-btn"
+          >
+            INSTALL THE APP
+          </a>
+        </div>
+        <div class="timer">
+          <img
+            class="img-timer"
+            src="./images/table_timer.webp"
+            alt="table_timer"
+          />
+          <p class="text-timer">
+            Bonus will expire in:
+            <span class="timer-display" id="timer-display">15:00</span>
+          </p>
+        </div>
+      </div>
+      <!-- <h2>WELL DONE</h2>
+      <p>YOU WON: <strong>450 GBP</strong> + 250 FREE SPINS</p>
+      <p>Turn on notifications and receive more special bonuses!</p>
+      <a
+        href="https://www.pragmaticplay.com/en/games/bigger-bass-splash/?gamelang=en&cur=USD"
+        id="install-btn"
+        >INSTALL APP</a
+      >
+      <p>Bonus will expire in: <span>15:00</span></p> -->
+    </div>
+  </body>
+</html>
