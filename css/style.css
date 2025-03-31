@@ -576,7 +576,11 @@ body {
   }
 
   .wrapper-freespins {
-    top: 60%;
+    top: 63%;
+  }
+
+  .wrapper-btn-spin {
+    top: 64%;
   }
 
   .win-icon {
