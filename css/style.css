@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 56px;
   z-index: 9999;
 }
 
@@ -146,11 +146,7 @@ body {
   align-items: center;
   width: 1080px;
   height: 1945px;
-  /* width: 100%;
-  height: auto;
-  min-height: 100vh; */
   background-image: url(../images/background.webp);
-  /* background-size: contain; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -159,31 +155,22 @@ body {
 .icon-bigger {
   position: absolute;
   width: 48%;
-
-  /* width: 530px; */
   max-height: 530px;
   top: -3%;
-
-  /* top: -55px; */
   left: 0;
   z-index: 1;
 }
 .man {
   position: absolute;
   width: 86%;
-
-  /* width: 941px; */
   max-height: 907px;
   top: -2.5%;
-  /* top: -50px; */
   right: -10%;
-
-  /* right: -111px; */
 }
 
 #slot-machine {
   position: absolute;
-  top: 24%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
