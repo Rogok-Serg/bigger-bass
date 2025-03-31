@@ -614,12 +614,12 @@ body {
   .install {
     position: relative;
     width: 67vw;
-    padding-top: 9;
+    padding-top: 9px;
   }
 
   .img-install {
     width: 60vw;
-    top: -33px;
+    top: -40px;
     left: 15px;
   }
 
